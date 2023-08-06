@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 class UploadFileService {
   final Dio _dio = Dio();
 
-  Future<void> uploadFile(Uint8List file) async {
+  Future<void> uploadFile(Uint8List file, int type) async {
     final formData = FormData.fromMap({
       'file': MultipartFile.fromBytes(file)
     });

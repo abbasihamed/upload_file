@@ -8,6 +8,6 @@ class UploadFileRepositoryImpl implements UploadFileRepository {
 
   @override
   uploadFile(UploadFileEntity file) async {
-    await _uploadFileService.uploadFile(file.file);
+    await _uploadFileService.uploadFile(file.file, file.type);
   }
 }

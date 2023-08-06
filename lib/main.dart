@@ -1,4 +1,5 @@
 import 'package:file_picker/file_picker.dart';
+import 'package:file_upload/core/utils/enums.dart';
 import 'package:file_upload/feathures/feature_upload_file/presentation/bloc/upload_file_bloc.dart';
 import 'package:file_upload/locator.dart';
 import 'package:flutter/material.dart';
@@ -53,8 +54,8 @@ class _HomePageState extends State<HomePage> {
     );
 
     if (mounted) {
-      BlocProvider.of<UploadFileBloc>(context)
-          .add(UploadfileSendFileEvent(image!.files.first.bytes!));
+      BlocProvider.of<UploadFileBloc>(context).add(UploadfileSendFileEvent(
+          image!.files.first.bytes!, FileTypeEnum.meli));
     }
   }
 }

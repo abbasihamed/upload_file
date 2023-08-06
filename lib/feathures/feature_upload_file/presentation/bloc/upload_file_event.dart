@@ -9,7 +9,8 @@ sealed class UploadFileEvent extends Equatable {
 
 class UploadfileSendFileEvent extends UploadFileEvent {
   final Uint8List file;
-  const UploadfileSendFileEvent(this.file);
+  final FileTypeEnum fileType;
+  const UploadfileSendFileEvent(this.file, this.fileType);
 
   @override
   List<Object> get props => [file];
